@@ -78,4 +78,32 @@
 ### 1. MD
 
 * MD生成的摘要都是128位的。
-* JDK提供了MD5、MD2，但没提供MD4（使用Bouncy Castle）算法实现。
+* JDK提供了MD5、MD2，但没提供MD4算法，Bouncy Castle实现了MD4算法，另外Commons codec也没有实现MD4，因为Commons codec只不过是将JDK进行封装简化调用。
+
+### 2. SHA
+
+* 安全散列算法
+* 固定长度摘要信息
+* SHA-1（长度160），SHA-2（包括SHA-224、SHA-256、SHA-384、SHA-512）
+
+### 3. MAC
+
+* MAC（Message Authentication Code）
+* HMAC（keyed-Hash Message Authentication Code），含有密钥的散列函数算法
+* 融合MD、SHA
+
+## 对称加密算法
+
+* 初等的加密算法，安全性不高
+* 常见有DES算法，长度不够，衍生出3DES算法，由3DES发展了AES算法。
+* PBE
+* IDEA
+
+### 1. DES
+
+* DES（Data Encryption Standard）数据加密标准，易被破解，安全性不高，密钥长度为56位。
+
+### 2. 3DES
+
+* 3重DES密钥长度增加，默认168
+* 迭代次数更多
